@@ -1,0 +1,55 @@
+
+
+1.Check if the given string is a palindrome. E.g. “aabbaa” is a palindrome.
+
+	function isPalindrome(str) {  
+	    
+	    let i = 0
+	    for (; i < str.length / 2; i++) {   
+		if (str[i] !== str[str.length - 1 - i]) {  
+		    return 'It is not a palindrome'
+		}  
+	    }
+	    if(i === str.length /2){
+		return 'It is a palindrome'
+	    }
+	}
+2.Find the sum of min and max elements in the array
+
+	function sumOfMaxAndMinElInArr(arr){
+	    let maxEl = arr[0]
+	    let minEl = arr[arr.length - 1]
+	    for(let i = 0;i<arr.length;i++){
+		if(arr[i] > maxEl){
+		    maxEl = arr[i]
+		}else if(arr[i] < minEl){
+		    minEl = arr[i]
+		}
+	    }
+	    return (minEl + maxEl)
+	}
+3.For the given N create an array with length of N where all elements are unique
+
+	function createArrWithLengthN(n){
+	    let arr = Array.from({length:n}).map((el,i)=>arr[i]=i+1)
+	    return arr
+	}
+
+
+
+
+4.Create a function which will convert the given snake_case_string into a CamelCaseString
+	function toCamelCase(str){
+	    let snakeCaseArr = str.split("_")
+	    let camelCaseArr = arr.map((el,i)=>{
+		if(i === 0){
+		    return el
+		}else{
+		    return el[0].toUpperCase().concat(el.substring(1))
+		}
+	    })
+		
+	    let camelCaseStr = arr.join("")
+
+	    return camelCaseStr
+}
