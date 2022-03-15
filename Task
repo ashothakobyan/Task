@@ -31,8 +31,9 @@
 3.For the given N create an array with length of N where all elements are unique
 
 	function createArrWithLengthN(n){
-	    let arr = Array.from({length:n}).map((el,i)=>arr[i]=i+1)
-	    return arr
+	    let arr = Array.from({length:n})
+	    let result = arr.map((el,i)=>arr[i]=i+1)
+	    return result
 	}
 
 
@@ -41,7 +42,7 @@
 4.Create a function which will convert the given snake_case_string into a CamelCaseString
 	function toCamelCase(str){
 	    let snakeCaseArr = str.split("_")
-	    let camelCaseArr = arr.map((el,i)=>{
+	    let camelCaseArr = snakeCaseArr.map((el,i)=>{
 		if(i === 0){
 		    return el
 		}else{
@@ -49,7 +50,7 @@
 		}
 	    })
 		
-	    let camelCaseStr = arr.join("")
+	    let camelCaseStr = camelCaseArr.join("")
 
 	    return camelCaseStr
 }
